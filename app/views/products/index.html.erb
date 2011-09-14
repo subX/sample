@@ -1,0 +1,16 @@
+<%= link_to 'New Product', new_product_path %>
+<h1>Listing products</h1>
+
+<% @products.each do |product| %>
+    
+    <div align=center style="width: 300px; height: 300px; float:left">
+		<img src=<%= product.image_url %> ></br>
+		<%= product.name %></br>
+		Цена: <%= product.price %> рублей</br>
+		<%= product.description %>
+	</div>	
+<br>
+<% end %>
+
+
+

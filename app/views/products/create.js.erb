@@ -1,0 +1,14 @@
+$("#errors").html("<%= escape_javascript(render(:partial=>'errors')) %>");
+
+if (<%= @product.save %>) {
+
+	$("#notice").html('Product was successfully created');
+	$("#image").html("");
+	$("#name").attr('value', "");
+	$("#product_image_url").attr('value', "");
+	$("#product_name").attr('value', "");
+	$("#product_description").attr('value', "");
+	$("#product_price").attr('value', "");
+
+	
+	}

@@ -1,0 +1,64 @@
+<% size = 35 %>
+
+  <div id="errors">
+  </div>
+	<p id="notice">
+		
+	</p>
+	
+
+<%= form_tag new_path, :method=>:get, :remote => true do %>
+	<div class="field">
+		<%= label_tag :name_ %></br>
+		<%= text_field_tag :name, "", :size=>size %>
+	</div>
+	<%= submit_tag "Подобрать изображение" %>
+  
+<% end %>
+
+
+
+<%= form_for(@product, new_path, :remote=>true) do |f| %>
+  
+	
+
+
+  <div class="field", hidden=true>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  
+  
+				
+				
+	
+  
+  <div class="field", hidden=true>
+    <%= f.label :image_url %><br />
+    <%= f.text_field :image_url %>
+  </div>
+  
+  <div id="image">
+  </div>
+  
+  
+  
+  </br>
+  
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description, :size=>size %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price, :size=>size %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+  
+
+<% end %>
+

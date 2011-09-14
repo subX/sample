@@ -1,0 +1,15 @@
+if (<%= @image_url.to_s.empty? %>) {
+	$("#image").html("");
+	$("#notice").html("Изображения не найдены");
+	$("#product_description").attr('value', "");
+	}
+	else {
+	$("#image").html("<img src=<%= @image_url %>>");
+	$("#notice").html("");
+	$("#product_description").attr('value', "Просто " + $("#name").attr('value'));
+	}
+
+$("#product_image_url").attr('value', "<%= @image_url %>");
+$("#product_name").attr('value', $("#name").attr('value'));
+$("#errors").html("");
+
